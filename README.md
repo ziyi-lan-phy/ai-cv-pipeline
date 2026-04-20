@@ -1,6 +1,3 @@
-可以，我帮你把这版 README 改成更自然、适合直接放 GitHub 的版本。
-我保留你的内容和流程，只把语言整理顺一点。
-
 # AI CV Generation Pipeline
 A Python-based workflow for generating job-tailored LaTeX resumes from job descriptions.
 ## Workflow
