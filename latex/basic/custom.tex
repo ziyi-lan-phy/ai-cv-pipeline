@@ -1,0 +1,38 @@
+% ================= Custom Commands =================
+% --- Custom Command: Section Header ---
+% Aligns the title (left col), Diamond (middle), and Line (right col)
+\newcommand{\cvsection}[1]{%
+  \vspace{4mm}
+  \noindent
+  \begin{tabular}{@{}p{3.5cm}@{}p{0.6cm}@{}p{12.4cm}@{}}
+    \raggedleft \textbf{\large \MakeUppercase{#1}} & 
+    \centering \begin{tikzpicture}[baseline=-0.5ex]
+      \node[diamond, fill=black, inner sep=2pt] at (0,0) {};
+    \end{tikzpicture} & 
+    \vfill\rule{\linewidth}{0.8pt} \\
+  \end{tabular}
+  \vspace{2mm}
+}
+
+% --- Custom Command: Timeline Item ---
+\newcommand{\cvitem}[2]{%
+  \noindent
+  \begin{tabular}{@{}p{3.5cm}@{}p{0.6cm}@{}p{12.4cm}@{}}
+    \raggedleft \textbf{#1} & 
+    \centering \begin{tikzpicture}[baseline=-0.5ex]
+      \node[diamond, fill=black, inner sep=1.2pt] at (0,0) {};
+    \end{tikzpicture} & 
+    #2 \\
+  \end{tabular}
+  \vspace{1.5mm}
+}
+
+% --- Bullet Environment ---
+\newlist{cvsubitems}{itemize}{1}
+\setlist[cvsubitems]{label=$\bullet$, leftmargin=1.5em, nosep, before=\vspace{1mm}, after=\vspace{1mm}}
+
+% ================= Page Setup =================
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+\rfoot{{\footnotesize Curriculum Vitae, Ziyi Lan, \thepage/\pageref{LastPage}}}

@@ -1,0 +1,447 @@
+# Role
+You are a senior LaTeX formatting expert and CV optimization consultant.
+
+# Task
+Your task is to fill placeholders in the provided LaTeX CV template modules using only the provided candidate profile and the target job description.
+
+You must:
+- replace placeholders only
+- preserve LaTeX structure
+- keep FIXED content unchanged
+- return LaTeX only
+- use \& for ampersand, never \\&
+
+# Target Job
+## Title
+AI产品经理
+
+## Link
+https://zhaopin.meituan.com/web/position/detail?jobUnionId=3524979618&highlightType=campus
+
+## Keywords
+AI产品经理, 校园招聘, 应届生, AI, 产品经理, Demo, AI编程, API, 论文阅读, 用户体验
+
+## Description
+美团北斗计划校园招聘的AI产品经理提前批岗位，面向AI方向高潜校招生。岗位强调对AI改善世界的初心、强学习能力和动手能力，以及对AI产品的理解与实践经验。工作中将参与AI核心团队项目，自己写Demo、快速做实验，并基于业务落地场景和用户需求推进产品实践。工作地点为北京市、上海市。
+
+# Candidate Profile
+name: Demo Research Candidate
+email: demo@example.com
+phone: +41 xxx xxx xxxx
+location: Europe / United States
+professional_summary: 'Research-oriented physicist with experience in theoretical
+  physics, mathematical modeling, statistical analysis, and scientific writing. Strong
+  background in foundational problem solving and quantitative reasoning.
+
+  '
+education:
+- institution: European Research University
+  short_name: ERU
+  degree: PhD in Physics
+  start: '1900'
+  end: '1905'
+  note: Doctoral research in theoretical physics
+- institution: Technical Institute of Europe
+  short_name: TIE
+  degree: Diploma in Physics and Mathematics
+  start: '1896'
+  end: '1900'
+  note: Focused on physics, mathematics, and scientific training
+research_experience:
+- title: Foundational Work in Theoretical Physics
+  type: Independent Research
+  institution: European Research Center
+  start: '1905'
+  end: '1905'
+  stack:
+  - Theoretical Physics
+  - Mathematical Modeling
+  - Scientific Writing
+  bullets:
+  - Developed theoretical frameworks to resolve inconsistencies in classical physical
+    models.
+  - Proposed new conceptual interpretations of space, time, and physical systems.
+  - Communicated complex scientific ideas through rigorous analytical writing.
+- title: Research on Light-Matter Interaction
+  type: Independent Research
+  institution: European Research Center
+  start: '1905'
+  end: '1905'
+  stack:
+  - Quantum Theory
+  - Statistical Physics
+  - Scientific Analysis
+  bullets:
+  - Investigated theoretical explanations for light-matter interaction phenomena.
+  - Connected theoretical reasoning with experimental observations in early modern
+    physics.
+  - Contributed to conceptual advances in quantum-level interpretation.
+- title: Statistical Analysis of Microscopic Motion
+  type: Research
+  institution: European Research Center
+  start: '1905'
+  end: '1905'
+  stack:
+  - Statistical Physics
+  - Probability
+  - Mathematical Analysis
+  bullets:
+  - Applied statistical methods to explain microscopic random motion in physical systems.
+  - Translated microscopic assumptions into observable macroscopic predictions.
+professional_experience:
+- company: Technical Patent Office
+  role: Technical Expert
+  location: Europe
+  start: '1902'
+  end: '1909'
+  bullets:
+  - Reviewed technical applications with a focus on mechanical and electrotechnical
+    systems.
+  - Evaluated technical concepts with precision and concise written reasoning.
+  - Balanced full-time technical work with independent research activities.
+- company: Advanced Research Institute
+  role: Professor
+  location: United States
+  start: '1933'
+  end: '1955'
+  bullets:
+  - Conducted advanced theoretical research in gravitation, cosmology, and field theory.
+  - Contributed to academic leadership through research, writing, and scientific exchange.
+skills:
+  theoretical_physics:
+  - Relativity
+  - Quantum Theory
+  - Statistical Physics
+  - Thermodynamics
+  mathematics:
+  - Mathematical Modeling
+  - Differential Equations
+  - Linear Algebra
+  - Tensor Analysis
+  research:
+  - Scientific Writing
+  - Theoretical Analysis
+  - Problem Solving
+  - Concept Development
+  productivity_tools:
+  - LaTeX
+  - Archival Research
+  - Academic Writing
+leadership_and_service:
+- role: Scientific Contributor
+  organization: International Academic Community
+  start: '1905'
+  end: '1955'
+  bullets:
+  - Published influential theoretical work in modern physics.
+  - Participated in international scientific communication and academic exchange.
+languages:
+- language: German
+  level: Native
+- language: English
+  level: Professional
+- language: French
+  level: Working proficiency
+targeting:
+  preferred_domains:
+  - Research
+  - Theoretical Physics
+  - Scientific Writing
+  - Quantitative Analysis
+  preferred_locations:
+  - Europe
+  - United States
+constraints:
+  do_not_claim:
+  - Modern programming skills
+  - Software engineering experience
+  - Machine learning experience
+  only_use_provided_facts: true
+  no_invention: true
+style:
+  language: English
+  concise: true
+  bullet_style: achievement_oriented
+  latex_safe: true
+
+
+# Template Modules
+
+## education.tex
+% ================================================================
+
+% Education Template - AI INSTRUCTIONS:
+
+% Fill 3 placeholders: {{ERU_FOCUS_AREAS}}, {{ERU_RELEVANT_COURSES}}, {{TIE_RELEVANT_COURSES}}
+
+% Select courses from asset library matching job requirements
+
+% The middle education entry is FIXED - do not modify
+
+% ================================================================
+
+% ================= Education =================
+
+\cvsection{Education}
+
+\cvitem{1900 -- 1905}{
+
+  \textbf{Ph.D. in Physics} | European Research University (ERU)
+
+  \begin{cvsubitems}
+
+    \item \textbf{Focus:} {{ERU_FOCUS_AREAS}}
+
+    \item \textbf{Rel. Coursework:} {{ERU_RELEVANT_COURSES}}
+
+  \end{cvsubitems}
+
+}
+
+\cvitem{1896 -- 1900}{
+
+  \textbf{Diploma in Physics and Mathematics} | Technical Institute of Europe (TIE)
+
+  \begin{cvsubitems}
+
+    \item \textbf{Rel. Coursework:} {{TIE_RELEVANT_COURSES}}
+
+  \end{cvsubitems}
+
+}
+
+## experience.tex
+% ================================================================
+% MODULE: Experience (Research + Professional)
+% ================================================================
+% AI INSTRUCTIONS - ADAPTIVE SECTION ORDERING:
+%
+% This file contains TWO major sections that should be REORDERED based on job:
+%   1. Research Experience
+%   2. Professional Experience
+%
+% ORDERING DECISION:
+%   Step 1: Analyze {{JOB_KEYWORDS}} and {{JOB_DESCRIPTION}}
+%   Step 2: Determine which experience type is MORE relevant:
+%     - Academic/R&D/PhD keywords → Output Research FIRST, then Professional
+%     - Industry/Engineering/Software keywords → Output Professional FIRST, then Research
+%   Step 3: REORDER the sections in your output accordingly
+%
+% OUTPUT INSTRUCTIONS:
+%   - Copy the MORE RELEVANT section first in your output
+%   - Copy the LESS RELEVANT section second in your output
+%   - Adjust bullet counts as specified in each section's comments below
+% ================================================================
+
+% ================================================================
+% SECTION A: Research Experience
+% ================================================================
+% CONTENT DEPTH:
+%   - High priority (research-focused jobs): 3-4 bullets per experience
+%   - Medium priority (mixed roles): 2-3 bullets per experience
+%   - Low priority (purely industry roles): 0-1 bullets per most relevant experience
+%
+% P-A-R FORMAT (Problem-Action-Result):
+%   - Problem: What challenge/question was addressed
+%   - Action: What methods/techniques you used
+%   - Result: What you achieved/discovered
+% 
+% Placeholders to fill (each placeholder becomes multiple \item bullets):
+%   - {{MASTER_THESIS_BULLETS}}  → Output 2-4 \item bullets
+%   - {{BACHELOR_THESIS_BULLETS}} → Output 1-2 \item bullets
+%   - {{RESEARCH_PROJECT_BULLETS}} → Output 0-1 \item bullets
+% ================================================================
+
+\cvsection{Research Experience}
+
+\cvitem{1905 -- 1905}{
+  \textbf{Doctoral Research} | European Research University, Europe
+  \begin{cvsubitems}
+    \item \textbf{Topic:} Foundational Work in Theoretical Physics
+    {{MASTER_THESIS_BULLETS}}
+  \end{cvsubitems}
+}
+
+\cvitem{1900 -- 1900}{
+  \textbf{Research Project} | Technical Institute of Europe, Europe
+  \begin{cvsubitems}
+    \item \textbf{Topic:} Research on Light-Matter Interaction
+    {{BACHELOR_THESIS_BULLETS}}
+  \end{cvsubitems}
+}
+
+\cvitem{1900 -- 1901}{
+  \textbf{Independent Research Training} | European Research Center, Europe
+  \begin{cvsubitems}
+    \item \textbf{Topic:} Statistical Analysis of Microscopic Motion
+    {{RESEARCH_PROJECT_BULLETS}}
+  \end{cvsubitems}
+}
+
+% ================================================================
+% SECTION B: Professional Experience
+% ================================================================
+% CONTENT DEPTH:
+%   - High priority (industry-focused jobs): 3-4 bullets per experience
+%   - Medium priority (mixed roles): 2-3 bullets per experience
+%   - Low priority (purely academic roles): 1-2 bullets highlighting transferable skills
+%   - Can omit Bank experience entirely for highly technical roles
+%
+% ACHIEVEMENT FORMAT:
+%   - Start with action verbs (Developed, Implemented, Analyzed, etc.)
+%   - Include quantifiable results when possible
+%   - Highlight skills/tools relevant to {{JOB_KEYWORDS}}
+%
+% Placeholders to fill (each placeholder becomes multiple \item bullets):
+%   - {{FRAUNHOFER_BULLETS}}  → Output 1-3 \item bullets
+%   - {{BANK_BULLETS}}        → Output 0-2 \item bullets (can omit entirely)
+% ================================================================
+
+\cvsection{Professional Experience}
+
+\cvitem{1902 -- 1909}{
+  \textbf{Technical Expert} | Technical Patent Office, Europe
+  \begin{cvsubitems}
+    {{FRAUNHOFER_BULLETS}}
+  \end{cvsubitems}
+}
+
+\cvitem{1933 -- 1955}{
+  \textbf{Professor} | Advanced Research Institute, United States
+  \begin{cvsubitems}
+    {{BANK_BULLETS}}
+  \end{cvsubitems}
+}
+
+## skills.tex
+% ================================================================
+% MODULE: Skills
+% ================================================================
+% AI INSTRUCTIONS:
+% Fill placeholders with job-relevant skills from asset library.
+%
+% Placeholders to fill:
+%   - {{SKILLS_SECTION_TITLE}} (optional: customize section title if needed)
+%   - {{TECHNICAL_SKILLS_BULLETS}} (3-6 category bullets)
+%
+% SECTION TITLE CUSTOMIZATION:
+%   - Default: "Technical \& Computational Skills"
+%   - For Software/ML jobs: "Technical Skills" or "Programming \& Data Science"
+%   - For Research jobs: "Technical \& Computational Skills" or "Research \& Computing Skills"
+%   - For Industry jobs: "Technical \& Engineering Skills"
+%   - Keep it concise and relevant to {{JOB_KEYWORDS}}
+%
+% CATEGORIZATION RULES:
+%   - Group skills by category (e.g., Programming, Tools, Domain Knowledge)
+%   - Each category = 1 bullet point
+%   - Format: \item \textbf{Category:} Skill1, Skill2, Skill3
+%
+% SELECTION PRIORITY:
+%   1. Match skills to {{JOB_KEYWORDS}} first
+%   2. Include skills mentioned in {{JOB_DESCRIPTION}}
+%   3. Add relevant complementary skills from asset library
+%   4. Order categories by relevance (most important first)
+%
+% RULES:
+%   - Languages section is FIXED - do NOT modify
+%   - Keep skill lists concise (3-8 items per category)
+%   - Use official tool/language names with correct capitalization
+%   - No proficiency levels needed (presence implies proficiency)
+%   - If no better title needed, keep default "Technical \& Computational Skills"
+% ================================================================
+
+% ================= Skills =================
+\cvsection{Skills}
+
+\cvitem{{{SKILLS_SECTION_TITLE}}}{
+  \begin{cvsubitems}
+    {{TECHNICAL_SKILLS_BULLETS}}
+  \end{cvsubitems}
+}
+
+\cvitem{Languages}{
+  \begin{cvsubitems}
+    \item German (Native), English (Professional), French (Working Proficiency)
+    % FIXED - Do NOT modify this line
+  \end{cvsubitems}
+}
+
+## projects.tex
+% ================================================================
+
+% MODULE: Projects
+
+% ================================================================
+
+% AI INSTRUCTIONS:
+
+% Fill project placeholders with job-relevant content from the asset library.
+
+% Select 1-3 projects depending on role relevance.
+
+% Preserve LaTeX structure and formatting.
+
+% ================================================================
+
+\cvsection{Projects}
+
+\cvitem{Research Project}{
+
+  \textbf{Computational Modeling Project}
+
+  \begin{cvsubitems}
+
+    {{PROJECT_1_BULLETS}}
+
+  \end{cvsubitems}
+
+}
+
+\cvitem{Technical Project}{
+
+  \textbf{Scientific Data Analysis Workflow}
+
+  \begin{cvsubitems}
+
+    {{PROJECT_2_BULLETS}}
+
+  \end{cvsubitems}
+
+}
+
+\cvitem{Applied Project}{
+
+  \textbf{Automation and Reporting Pipeline}
+
+  \begin{cvsubitems}
+
+    {{PROJECT_3_BULLETS}}
+
+  \end{cvsubitems}
+
+}
+
+# Execution Rules
+1. Read comments in each template first.
+2. Fill placeholders only.
+3. Do not modify section structure, commands, or FIXED content.
+4. Use only facts explicitly provided in the profile.
+5. Do not invent skills, achievements, publications, or experience.
+6. Reorder the experience sections according to the job type if required by the template.
+7. Ensure LaTeX-safe escaping.
+8. Before outputting, verify that no {{...}} placeholders remain.
+
+# Output Format
+Return only the final combined LaTeX content in this format:
+
+%=== education.tex ===
+[filled content]
+
+%=== experience.tex ===
+[filled content]
+
+%=== skills.tex ===
+[filled content]
+
+%=== projects.tex ===
+[filled content if included]

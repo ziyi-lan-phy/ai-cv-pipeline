@@ -1,0 +1,148 @@
+name: Demo Research Candidate
+email: demo@example.com
+phone: "+41 xxx xxx xxxx"
+location: "Europe / United States"
+
+professional_summary: >
+  Research-oriented physicist with experience in theoretical physics,
+  mathematical modeling, statistical analysis, and scientific writing.
+  Strong background in foundational problem solving and quantitative reasoning.
+
+education:
+  - institution: "European Research University"
+    short_name: "ERU"
+    degree: "PhD in Physics"
+    start: "1900"
+    end: "1905"
+    note: "Doctoral research in theoretical physics"
+
+  - institution: "Technical Institute of Europe"
+    short_name: "TIE"
+    degree: "Diploma in Physics and Mathematics"
+    start: "1896"
+    end: "1900"
+    note: "Focused on physics, mathematics, and scientific training"
+
+research_experience:
+  - title: "Foundational Work in Theoretical Physics"
+    type: "Independent Research"
+    institution: "European Research Center"
+    start: "1905"
+    end: "1905"
+    stack:
+      - "Theoretical Physics"
+      - "Mathematical Modeling"
+      - "Scientific Writing"
+    bullets:
+      - "Developed theoretical frameworks to resolve inconsistencies in classical physical models."
+      - "Proposed new conceptual interpretations of space, time, and physical systems."
+      - "Communicated complex scientific ideas through rigorous analytical writing."
+
+  - title: "Research on Light-Matter Interaction"
+    type: "Independent Research"
+    institution: "European Research Center"
+    start: "1905"
+    end: "1905"
+    stack:
+      - "Quantum Theory"
+      - "Statistical Physics"
+      - "Scientific Analysis"
+    bullets:
+      - "Investigated theoretical explanations for light-matter interaction phenomena."
+      - "Connected theoretical reasoning with experimental observations in early modern physics."
+      - "Contributed to conceptual advances in quantum-level interpretation."
+
+  - title: "Statistical Analysis of Microscopic Motion"
+    type: "Research"
+    institution: "European Research Center"
+    start: "1905"
+    end: "1905"
+    stack:
+      - "Statistical Physics"
+      - "Probability"
+      - "Mathematical Analysis"
+    bullets:
+      - "Applied statistical methods to explain microscopic random motion in physical systems."
+      - "Translated microscopic assumptions into observable macroscopic predictions."
+
+professional_experience:
+  - company: "Technical Patent Office"
+    role: "Technical Expert"
+    location: "Europe"
+    start: "1902"
+    end: "1909"
+    bullets:
+      - "Reviewed technical applications with a focus on mechanical and electrotechnical systems."
+      - "Evaluated technical concepts with precision and concise written reasoning."
+      - "Balanced full-time technical work with independent research activities."
+
+  - company: "Advanced Research Institute"
+    role: "Professor"
+    location: "United States"
+    start: "1933"
+    end: "1955"
+    bullets:
+      - "Conducted advanced theoretical research in gravitation, cosmology, and field theory."
+      - "Contributed to academic leadership through research, writing, and scientific exchange."
+
+skills:
+  theoretical_physics:
+    - "Relativity"
+    - "Quantum Theory"
+    - "Statistical Physics"
+    - "Thermodynamics"
+  mathematics:
+    - "Mathematical Modeling"
+    - "Differential Equations"
+    - "Linear Algebra"
+    - "Tensor Analysis"
+  research:
+    - "Scientific Writing"
+    - "Theoretical Analysis"
+    - "Problem Solving"
+    - "Concept Development"
+  productivity_tools:
+    - "LaTeX"
+    - "Archival Research"
+    - "Academic Writing"
+
+leadership_and_service:
+  - role: "Scientific Contributor"
+    organization: "International Academic Community"
+    start: "1905"
+    end: "1955"
+    bullets:
+      - "Published influential theoretical work in modern physics."
+      - "Participated in international scientific communication and academic exchange."
+
+languages:
+  - language: "German"
+    level: "Native"
+  - language: "English"
+    level: "Professional"
+  - language: "French"
+    level: "Working proficiency"
+
+targeting:
+  preferred_domains:
+    - "Research"
+    - "Theoretical Physics"
+    - "Scientific Writing"
+    - "Quantitative Analysis"
+  preferred_locations:
+    - "Europe"
+    - "United States"
+
+constraints:
+  do_not_claim:
+    - "Modern programming skills"
+    - "Software engineering experience"
+    - "Machine learning experience"
+  only_use_provided_facts: true
+  no_invention: true
+
+style:
+  language: "English"
+  concise: true
+  bullet_style: "achievement_oriented"
+  latex_safe: true

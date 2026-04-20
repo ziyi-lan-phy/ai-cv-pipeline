@@ -1,0 +1,51 @@
+% ================================================================
+% MODULE: Skills
+% ================================================================
+% AI INSTRUCTIONS:
+% Fill placeholders with job-relevant skills from asset library.
+%
+% Placeholders to fill:
+%   - {{SKILLS_SECTION_TITLE}} (optional: customize section title if needed)
+%   - {{TECHNICAL_SKILLS_BULLETS}} (3-6 category bullets)
+%
+% SECTION TITLE CUSTOMIZATION:
+%   - Default: "Technical \& Computational Skills"
+%   - For Software/ML jobs: "Technical Skills" or "Programming \& Data Science"
+%   - For Research jobs: "Technical \& Computational Skills" or "Research \& Computing Skills"
+%   - For Industry jobs: "Technical \& Engineering Skills"
+%   - Keep it concise and relevant to {{JOB_KEYWORDS}}
+%
+% CATEGORIZATION RULES:
+%   - Group skills by category (e.g., Programming, Tools, Domain Knowledge)
+%   - Each category = 1 bullet point
+%   - Format: \item \textbf{Category:} Skill1, Skill2, Skill3
+%
+% SELECTION PRIORITY:
+%   1. Match skills to {{JOB_KEYWORDS}} first
+%   2. Include skills mentioned in {{JOB_DESCRIPTION}}
+%   3. Add relevant complementary skills from asset library
+%   4. Order categories by relevance (most important first)
+%
+% RULES:
+%   - Languages section is FIXED - do NOT modify
+%   - Keep skill lists concise (3-8 items per category)
+%   - Use official tool/language names with correct capitalization
+%   - No proficiency levels needed (presence implies proficiency)
+%   - If no better title needed, keep default "Technical \& Computational Skills"
+% ================================================================
+
+% ================= Skills =================
+\cvsection{Skills}
+
+\cvitem{{{SKILLS_SECTION_TITLE}}}{
+  \begin{cvsubitems}
+    {{TECHNICAL_SKILLS_BULLETS}}
+  \end{cvsubitems}
+}
+
+\cvitem{Languages}{
+  \begin{cvsubitems}
+    \item German (Native), English (Professional), French (Working Proficiency)
+    % FIXED - Do NOT modify this line
+  \end{cvsubitems}
+}

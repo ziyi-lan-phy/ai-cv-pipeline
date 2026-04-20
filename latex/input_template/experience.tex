@@ -1,0 +1,101 @@
+% ================================================================
+% MODULE: Experience (Research + Professional)
+% ================================================================
+% AI INSTRUCTIONS - ADAPTIVE SECTION ORDERING:
+%
+% This file contains TWO major sections that should be REORDERED based on job:
+%   1. Research Experience
+%   2. Professional Experience
+%
+% ORDERING DECISION:
+%   Step 1: Analyze {{JOB_KEYWORDS}} and {{JOB_DESCRIPTION}}
+%   Step 2: Determine which experience type is MORE relevant:
+%     - Academic/R&D/PhD keywords → Output Research FIRST, then Professional
+%     - Industry/Engineering/Software keywords → Output Professional FIRST, then Research
+%   Step 3: REORDER the sections in your output accordingly
+%
+% OUTPUT INSTRUCTIONS:
+%   - Copy the MORE RELEVANT section first in your output
+%   - Copy the LESS RELEVANT section second in your output
+%   - Adjust bullet counts as specified in each section's comments below
+% ================================================================
+
+% ================================================================
+% SECTION A: Research Experience
+% ================================================================
+% CONTENT DEPTH:
+%   - High priority (research-focused jobs): 3-4 bullets per experience
+%   - Medium priority (mixed roles): 2-3 bullets per experience
+%   - Low priority (purely industry roles): 0-1 bullets per most relevant experience
+%
+% P-A-R FORMAT (Problem-Action-Result):
+%   - Problem: What challenge/question was addressed
+%   - Action: What methods/techniques you used
+%   - Result: What you achieved/discovered
+% 
+% Placeholders to fill (each placeholder becomes multiple \item bullets):
+%   - {{MASTER_THESIS_BULLETS}}  → Output 2-4 \item bullets
+%   - {{BACHELOR_THESIS_BULLETS}} → Output 1-2 \item bullets
+%   - {{RESEARCH_PROJECT_BULLETS}} → Output 0-1 \item bullets
+% ================================================================
+
+\cvsection{Research Experience}
+
+\cvitem{1905 -- 1905}{
+  \textbf{Doctoral Research} | European Research University, Europe
+  \begin{cvsubitems}
+    \item \textbf{Topic:} Foundational Work in Theoretical Physics
+    {{MASTER_THESIS_BULLETS}}
+  \end{cvsubitems}
+}
+
+\cvitem{1900 -- 1900}{
+  \textbf{Research Project} | Technical Institute of Europe, Europe
+  \begin{cvsubitems}
+    \item \textbf{Topic:} Research on Light-Matter Interaction
+    {{BACHELOR_THESIS_BULLETS}}
+  \end{cvsubitems}
+}
+
+\cvitem{1900 -- 1901}{
+  \textbf{Independent Research Training} | European Research Center, Europe
+  \begin{cvsubitems}
+    \item \textbf{Topic:} Statistical Analysis of Microscopic Motion
+    {{RESEARCH_PROJECT_BULLETS}}
+  \end{cvsubitems}
+}
+
+% ================================================================
+% SECTION B: Professional Experience
+% ================================================================
+% CONTENT DEPTH:
+%   - High priority (industry-focused jobs): 3-4 bullets per experience
+%   - Medium priority (mixed roles): 2-3 bullets per experience
+%   - Low priority (purely academic roles): 1-2 bullets highlighting transferable skills
+%   - Can omit Bank experience entirely for highly technical roles
+%
+% ACHIEVEMENT FORMAT:
+%   - Start with action verbs (Developed, Implemented, Analyzed, etc.)
+%   - Include quantifiable results when possible
+%   - Highlight skills/tools relevant to {{JOB_KEYWORDS}}
+%
+% Placeholders to fill (each placeholder becomes multiple \item bullets):
+%   - {{FRAUNHOFER_BULLETS}}  → Output 1-3 \item bullets
+%   - {{BANK_BULLETS}}        → Output 0-2 \item bullets (can omit entirely)
+% ================================================================
+
+\cvsection{Professional Experience}
+
+\cvitem{1902 -- 1909}{
+  \textbf{Technical Expert} | Technical Patent Office, Europe
+  \begin{cvsubitems}
+    {{FRAUNHOFER_BULLETS}}
+  \end{cvsubitems}
+}
+
+\cvitem{1933 -- 1955}{
+  \textbf{Professor} | Advanced Research Institute, United States
+  \begin{cvsubitems}
+    {{BANK_BULLETS}}
+  \end{cvsubitems}
+}
