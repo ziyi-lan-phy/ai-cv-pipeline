@@ -1,3 +1,6 @@
+可以，我帮你把这版 README 改成更自然、适合直接放 GitHub 的版本。
+我保留你的内容和流程，只把语言整理顺一点。
+
 # AI CV Generation Pipeline
 A Python-based workflow for generating job-tailored LaTeX resumes from job descriptions.
 ## Workflow
@@ -20,42 +23,45 @@ Compile PDF
 ```
 ## Usage
 
-1. Prepare the following files:
-    * data/profile.yaml # 你自己的资料
-    * data/prompt.txt # 衔接资料和latex格式
-    * latex/basic/photo0.jpg # 替换你的照片
-    * latex/basic/header.tex # 替换你的个人信息
-    * latex/input_template/education.tex # 替换教育title内容，下同
-    * latex/input_template/experience.tex
-    * latex/input_template/skills.tex
-    * latex/input_template/projects.tex
+1. Prepare the following files
 
-2. Add your OpenAI API key to .env:
-```bash
+* data/profile.yaml — your personal profile
+* data/prompt.txt — prompt rules connecting profile data and LaTeX templates
+* latex/basic/photo0.jpg — replace with your own photo
+* latex/basic/header.tex — replace with your own personal information
+* latex/input_template/education.tex — customize education template
+* latex/input_template/experience.tex
+* latex/input_template/skills.tex
+* latex/input_template/projects.tex
+
+2. Add your OpenAI API key to .env
+
 OPENAI_API_KEY=your_api_key_here
-```
-3. Ingest a job description:
 
-之前需要在`data`创建`jobs.xlsx`，可以通过`jobs_xlsx_creat.ipynb`初始设置
+3. Create jobs.xlsx
 
-以下内容在`scripts`目录里继续
+Before ingestion, create data/jobs.xlsx.
+
+You can initialize it with:
+
+* jobs_xlsx_creat.ipynb
+
+4. Ingest a job description
+
+Run the following inside the scripts directory:
 ```bash
 cd scripts
+python ingest_job.py "JOB_URL"
 ```
-
-```bash
-python ingest_job.py "JOB_URL" 
-```
-4. Generate job-specific LaTeX content:
+5. Generate job-specific LaTeX content
 ```bash
 python generate_cv_for_job.py <Job_ID>
 ```
-5. Compile the final PDF:
-以下内容在`latex`目录里继续
+6. Compile the final PDF
+
+Then switch to the latex directory:
 ```bash
-cd latex
-```
-```bash
+cd ../latex
 python cv_job_id_auto.py <Job_ID>
 ```
 ## Stack
@@ -76,3 +82,12 @@ Do not upload:
 * real jobs.xlsx
 * .env
 * generated private application files
+
+## Example
+```bash
+cd scripts
+python ingest_job.py "https://example.com/job"
+python generate_cv_for_job.py 1
+cd ../latex
+python cv_job_id_auto.py 1
+```
